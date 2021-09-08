@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clone Raiz Airbnb | PaB | JS Raiz</title>
+  <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
+  <style>
+    #map {
+      width: 900px;
+      height: 400px;
+    }
+
+    .map-price {
+      font-weight: bold;
+      font-size: 12px;
+      padding: 3px 10px;
+      margin: 0;
+      text-align: center;
+      background-color: #fff;
+      color: #000;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="node_modules/leaflet/dist/leaflet.js"></script>
+  <script type="module">
+    import init from './assets/main.js';
+    init();
+  </script>
+</body>
+</html>

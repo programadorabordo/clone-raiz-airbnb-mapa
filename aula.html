@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clone Raiz Airbnb | Programador a Bordo</title>
+  <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
+  <style>
+    #map {
+      width: 800px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="node_modules/leaflet/dist/leaflet.js"></script>
+  <script>
+    const L = window.L || {};
+    const $map = document.getElementById('map');
+    
+    const zoom = 13;
+
+    const mapInstance = L.map($map).setView([-27.588183494013148, -48.50627298921619], zoom);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{styleId}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+      attribution: '<a href="#">&copy; MapBox</a>',
+      styleId: 'mapbox/dark-v10',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken: 'pk.eyJ1IjoiYXlydG9udGVzaGltYSIsImEiOiJja3Q0eGk3ZXcwMzNkMm9vMGM1NjFxa2g0In0.1L_Iz2plHMs3M-KMq2yEeA',
+    }).addTo(mapInstance);
+
+
+    const marker1 = L.marker([ -27.60108343991049, -48.47370054757918 ]);
+
+    L.featureGroup([
+      marker1,
+      L.marker([ -27.599840722529198, -48.48720690338242 ]),
+      L.marker([ -27.59702820498889, -48.498868128763384 ])
+    ])
+      .bindPopup('Olá galera!')
+      .on('click', function(e) {
+        console.log('clicou!!!', e);
+      })
+      .addTo(mapInstance);
+  </script>
+</body>
+</html>

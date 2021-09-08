@@ -1,0 +1,25 @@
+{
+  "name": "clone-raiz-airbnb-mapas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/programadorabordo/clone-raiz-airbnb-mapa.git"
+  },
+  "keywords": [
+    "ayrton"
+  ],
+  "author": "Ayrton Teshima",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/programadorabordo/clone-raiz-airbnb-mapa/issues"
+  },
+  "homepage": "https://github.com/programadorabordo/clone-raiz-airbnb-mapa#readme",
+  "dependencies": {
+    "leaflet": "^1.7.1"
+  }
+}
