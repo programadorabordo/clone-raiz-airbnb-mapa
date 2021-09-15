@@ -2,7 +2,7 @@ import maps from './libs/maps.js';
 
 function init() {
   maps.initialize(
-    document.getElementById('map'),
+    document.querySelector('.map-instance'),
     {
       coords: [-27.588183494013148, -48.50627298921619],
       zoom: 13

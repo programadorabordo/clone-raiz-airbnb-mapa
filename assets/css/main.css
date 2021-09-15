@@ -1,0 +1,255 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'Circular';
+  src: local('CircularStd-Black'),
+      url('../fonts/Circular-Std-Black.woff2') format('woff2'),
+      url('../fonts/Circular-Std-Black.woff') format('woff'),
+      url('../fonts/Circular-Std-Black.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circular';
+  src: local('CircularStd-Bold'),
+      url('../fonts/Circular-Std-Book.woff2') format('woff2'),
+      url('../fonts/Circular-Std-Bold.woff') format('woff'),
+      url('../fonts/Circular-Std-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circular';
+  src: local('CircularStd-Medium'),
+      url('../fonts/CircularStd-Medium.woff2') format('woff2'),
+      url('../fonts/CircularStd-Medium.woff') format('woff'),
+      url('../fonts/CircularStd-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circular';
+  src: local('CircularAir-Light'),
+      url('../fonts/CircularAir-Light.woff2') format('woff2'),
+      url('../fonts/CircularAir-Light.woff') format('woff'),
+      url('../fonts/CircularAir-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.container {
+  display: flex;
+  font-family: 'Circular';
+  font-weight: 400;
+}
+
+.accommodations {
+  width: 55vw;
+  padding: 24px;
+}
+
+.accommodation {
+  display: flex;
+  flex-direction: row;
+  padding: 24px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.accommodation:last-child {
+  border-bottom: 0;
+}
+
+.accommodation-gallery__img img {
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.accommodation-infos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 16px;
+}
+
+.accommodation-infos__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.accommodation-infos__pretitle ,
+.accommodation-infos__title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.accommodation-infos__pretitle {
+  color: #717171;
+  font-size: 16px;
+}
+
+.accommodation-infos__title {
+  color: #484848;
+  font-size: 21px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.btn-like {
+  height: 24px;
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-like::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color:transparent;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.btn-like:hover::before {
+  background-color: #f7f7f7;
+}
+
+.accommodation-divider {
+  margin: 11px 0 0 0;
+  width: 32px;
+  border-width: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.accommodation-infos__body {
+  margin-top: 11px;
+}
+
+.accommodation-infos__details,
+.accommodation-infos__amenities {
+  color: #717171;
+  font-size: 16px;
+}
+
+.accommodation-infos__amenities {
+  margin-top: 4px;
+}
+
+.accommodation-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.accommodation-rating {
+  font-size: 16px;
+  display: flex;
+}
+
+.accommodation-rating__score {
+  color: #222222;
+  font-weight: bold;
+  padding: 0 3px;
+}
+
+.accommodation-rating__total-reviews {
+  color: #717171;
+}
+
+.accommodation-price {
+  text-align: right;
+}
+
+.accommodation-price__period {
+  color: #222222;
+  font-size: 21px;
+  font-weight: 500;
+  display: block;
+}
+
+.accommodation-price__period strong {
+  font-weight: bold;
+}
+
+.accommodation-price__total {
+  color: #484848;
+  font-size: 16px;
+  text-decoration: underline;
+  display: block;
+  margin-top: 4px;
+}
+
+.map-area {
+  width: 45vw;
+}
+
+.map {
+  position: sticky;
+  height: 100vh;
+  top: 0;
+}
+
+.map-instance {
+  width: 100%;
+  height: 100vh;
+}
