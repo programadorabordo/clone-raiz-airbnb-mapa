@@ -100,6 +100,16 @@ table {
   flex-direction: row;
   padding: 24px 0;
   border-bottom: 1px solid #ebebeb;
+  position: relative;
+}
+
+.accommodation-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 
 .accommodation:last-child {
@@ -155,6 +165,7 @@ table {
   outline: 0;
   cursor: pointer;
   position: relative;
+  z-index: 2;
 }
 
 .btn-like::before {
